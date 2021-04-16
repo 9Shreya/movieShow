@@ -1,0 +1,23 @@
+<div>
+
+<form  class='middile ' align='center' #login="ngForm" (submit)="loggin(login)">
+  <div class="row text-left mx-5" >
+    <div class="input-field  form-group col-md-12">
+            <label for='name' style="font-size: 15px;font-weight: bold;color: #fff;" >User Name</label>
+<input class="form-control" style="background: #fff;color: rgb(102, 100, 100);border-radius:10px" placeholder="User Name" id='name' type="text" required name='username'  #name=ngModel [(ngModel)]='email' 
+   />
+    </div>
+  </div>
+  <div class="row text-left mx-5" >
+    <div class="input-field form-group col-md-12">
+         <label class="active" for='position' style="font-size: 15px;font-weight: bold;color: #fff;">Password</label>
+      <input    class="form-control" id='position'style="background: #fff;color: rgb(102, 100, 100);border-radius:10px" placeholder="Password" type="password" required minlength="6" name="password" #position=ngModel [(ngModel)]='password'>
+
+    </div>
+  </div>
+   <div class="input-field col s12">
+<button class="btn btn-success center mb-4 mt-4" style="width: 50%;background: #28a745;" type="submit" [disabled]=login.invalid >Login</button>
+    </div>
+</form>
+
+</div>

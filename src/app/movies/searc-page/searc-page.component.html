@@ -1,0 +1,52 @@
+<div style="min-height: 100vh;">
+  <br>
+  <nav class="navbar containerGet fixed-top navbar-expand-lg navbar-dark bg-drak row navbarCode"[ngClass]="{
+  'stickedNav':valueScroll>50
+}">
+<span style=" margin-left: 100px;
+    color: white;
+    font-size: 23px;
+    font-weight: bold;cursor: pointer;" (click)="back()" routerLink='/movies/Card'>MOVIE SHOW</span>
+ <div class="col-md-8 ml-auto ">
+      <form class="form-inline col-md-12 ml-auto" #searchForm=ngForm>
+               <!-- <div class=" col-md-9"> -->
+            <div class=" d-flex ml-auto searchbar">
+        
+      <input class="form-control mr-2 pb-2" style="width:50%;padding-left: 16px;
+    border: none;box-shadow: none;
+    text-decoration: none;
+    background: transparent;
+font-size: 14px;
+    "  placeholder="Search" name=searchTerm [(ngModel)]=searchValueText aria-label="Search" (keypress)="textChange()">
+      <i class="fa fa-search ml-auto" aria-hidden="true" style="color: grey;
+    font-size: 15px;
+margin: 9px 24px 2px 0px;
+    "></i>
+      <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+   </div>
+       <button class="theme" (click)="themeChange()">{{themeVal|uppercase}}&nbsp;THEME </button>
+
+    </form>
+    </div>
+
+ 
+</nav>
+  <div style="margin-top: 10%;">
+    <app-commonmoviesearch 
+[movies]=movies
+[valueScroll]=281
+[searchdata]=search
+[page]=page
+
+></app-commonmoviesearch></div>
+<div [hidden]="movies.length>0" style="color: white;margin: 10% 0 0 5%;">
+    No data Found.. 
+</div>
+<div style="display: flex;">
+    <div style="text-align: left;width: 100%;">
+<button class="detailButton" (click)="loadMoreNext(page)">LOAD MORE</button>
+</div>
+<div style="text-align: right;width: 100%;">
+<button class="detailButton" (click)="back()">BACK</button>
+</div></div>
+</div>

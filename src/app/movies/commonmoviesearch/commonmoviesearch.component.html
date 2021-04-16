@@ -1,0 +1,93 @@
+ <div class="main row mx-4" >
+     <div class="row ml-2" style="width: 100%;">
+    <div class=" col-md-3 p-0 styleDisplay" *ngFor="let movie of movies;let i = index" >
+     <div class="picccc containerGet" *ngIf="movie.title" style="margin-left: 0;">
+        <div class="pics " >
+            <div style="height: 317px;">
+       <img src='https://ui-avatars.com/api/?background=random&&name={{movie.title}}&&rounded=true' alt='' class="pic-img">
+        <div class="person-info">
+            <h5 style="color: white;">{{movie.title}}</h5>
+            <h6>{{movie.genres}}</h6>
+        <p>{{movie.description|slice:0:20}}....</p>
+       </div></div>
+        <div class="ackdrop">
+<button class="detailButton" (click)="openModal(movie)">Details</button>
+             <div class="pic-icon" align="center">
+            <a ><i class="fab fa-facebook-f"></i></a>
+            <a ><i class="fab fa-twitter"></i></a>
+            <a ><i class="fab fa-instagram"></i></a>
+            <a ><i class="fab fa-linkedin"></i></a>
+        </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+        <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index:1111111111;    margin-top: 14%; width: 83%;">
+  <div class="modal-dialog" role="document">
+    <div  style="border-radius: 10px;">
+      <div class=" containerGet" style="background-color: rgba(255, 255, 255, 0.8) !important;    margin-left: 40%;">
+        <h6 class="modal-title"  align='center' id="exampleModalLabel">Something went wrong please <br> Click on refresh icon!!!</h6>
+    
+      <div class="modal-body m-auto" (click)="getPages()">
+        <button type="button"(click)="getPages()"  style="border:none; text-decoration: none;background-color: transparent;z-index: 1111111111;width: 100%;"  data-dismiss="modal"   > 
+          <!-- <img class="containerGet" src="assets/0b19df1c842634f3b669df87059e0c8f.gif" alt="" style="width: 50%;"> -->
+<i class="fa fa-refresh" aria-hidden="true"  style="font-size: 20px;"></i>
+
+        </button>
+      </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="1exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index:1111111111;    margin-top: 8%; max-height: 100vh;overflow-y: auto!important;width: 100%;">
+  <div class="modal-dialog" role="document" style="max-width: 80% !important">
+    <div  style="border-radius: 10px;">
+      <div class="modal-header modal-body containerGet" style="    border-radius: 10px;
+    border: 2px solid grey;">
+    
+        <div class="modal-title row w-100" id="exampleModalLabel">
+    
+<div class='col-md-8 containerGet' style="    width: 100%;min-height:250px;
+    margin: 0 0 0 9%;">
+<div class="" style="    padding-right: 13%;">
+  <div class='d-flex' >
+<h6 style="flex:2;color: black;">Title :</h6>&nbsp;<p style="    margin-top: -3px;flex:7">{{title}}</p>
+ </div>
+ <div class='d-flex' *ngIf='genres'>
+<h6 style="flex:2;color: black;">Genres :</h6>&nbsp;<p style="    margin-top: -3px;flex:7">{{genres}}</p>
+</div>
+  <div class='d-flex' *ngIf='discription'>
+<h6 style="flex:2;color: black;">Description :</h6>&nbsp;<p style="    margin-top: -3px;flex:7">{{discription}}</p>
+  </div>
+  
+</div>
+</div>
+ <div class='col-md-4' style="margin-left: -9%;
+    z-index: 111111;">
+          <img src='https://ui-avatars.com/api/?background=random&&name={{title}}' alt='' style="width: 65%;margin:0px;" class="pic-img">
+
+</div>
+        </div>
+         <button type="button" class="close" data-dismiss="modal" style="z-index: 11111111;" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+     
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class>
+  <div class="main-body" >
+  <div class="wrapper" [ngClass]="{
+  'light':theme=='light',
+  'dark':theme=='dark'
+  }" style="position:relative;top:16%">
+    <div id="formContent" >
+    <h5 class="underlineHover" style="  margin: 40px 8px 10px 8px; "  routerLink = "/login"  routerLinkActive="active" > Sign In</h5 >
+  <h5 class="underlineHover" style="  margin: 40px 8px 40px 8px; "   routerLink = "/signup"  routerLinkActive = "active" > Sign Up </h5>
+    <router-outlet></router-outlet>
+ 
+</div>
+</div>
+</div>
+       <button class="theme" (click)="themeChange()">{{themeVal|uppercase}}&nbsp;THEME </button>
+
+</div>

@@ -1,0 +1,18 @@
+.theme{
+  border: 1px solid white;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    margin-left: 20px;
+    /* border-radius: 5px; */
+    position: absolute;
+    top: 45px;
+     padding: 5px;
+    right: 33px;
+     
+     transition: .6s;
+}
+.theme:hover{
+   background-color: white;
+    color: black;
+}

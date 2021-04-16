@@ -1,0 +1,63 @@
+.searchbar{
+    background-color: white;
+border-radius: 15px;
+width: 50%;
+}
+.inputTag{
+    width: 100%;
+}
+.detailButton {
+     width: 40%;
+    height: 43px;
+    border: 2px solid #fff;
+    outline: none;
+    background-color: #fff;
+    color: rgb(102, 99, 99);
+    font-weight: bolder;
+    position: relative;
+    margin:10%;
+    border-radius: 15px;
+    transition: .5s linear ;
+}
+.detailButton:hover{
+    color: #fff;
+    background-color:transparent ;
+}
+.containerGet{
+    padding: 15px;
+      z-index: 11111;
+      margin-left: -8%;
+      background-color: rgba(255,255,255,0.2)!important;
+      backdrop-filter: blur(40px)!important;
+      border-radius: 10px;
+      box-shadow: 10px 10px 10px rgba(46,56,68,0.5)!important;  
+}
+.navbarCode{
+      height: 90px;
+      width: 110vw;
+      z-index: 11111;
+      background-color: rgba(255,255,255,0.02)!important;
+      backdrop-filter: blur(40px)!important;
+      box-shadow: 5px 5px 5px rgba(193, 198, 204, 0.5)!important;
+  justify-content: space-around;
+  transition: .6s;
+    }
+     .stickedNav{
+      height: 60px;
+    box-shadow: 5px 5px 5px rgba(70, 110, 161, 0.5)!important;
+
+    }
+    .theme{
+  border: 1px solid white;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    margin-left: 20px;
+   padding: 5px;
+    transition: 0.6s;
+    margin-left: 180px;
+}
+.theme:hover{
+   background-color: white;
+    color: black;
+}
